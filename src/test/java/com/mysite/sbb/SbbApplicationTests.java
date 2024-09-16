@@ -1,4 +1,4 @@
-package com.example.sbb;
+package com.mysite.sbb;
 
 import org.springframework.transaction.annotation.Transactional;
 import org.junit.jupiter.api.Test;
@@ -10,8 +10,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.util.Optional;
 
 import java.time.LocalDateTime;
-import java.util.List;
-import java.util.Queue;
 
 @SpringBootTest
 class SbbApplicationTests {
