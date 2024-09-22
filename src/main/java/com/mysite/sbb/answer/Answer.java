@@ -1,6 +1,7 @@
 package com.mysite.sbb.answer;
 
 import com.mysite.sbb.question.Question;
+import com.mysite.sbb.user.SiteUser;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -27,4 +28,7 @@ public class Answer {
 
     @ManyToOne // 여러 Answer가 하나의 Question에 연관될 수 있음
     private Question question;
+
+    @ManyToOne
+    private SiteUser author;
 }
