@@ -12,6 +12,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.ArrayList;
 import com.mysite.sbb.DataNotFoundException;
+import org.springframework.transaction.annotation.Transactional;
 
 @RequiredArgsConstructor
 @Service
@@ -57,5 +58,10 @@ public class QuestionService {
 
     public void delete(Question question) {
         this.questionRepository.delete(question);
+    }
+
+    @Transactional
+    public void deleteAll() {
+        questionRepository.deleteAll();
     }
 }
