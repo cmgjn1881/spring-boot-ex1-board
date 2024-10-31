@@ -64,4 +64,9 @@ public class QuestionService {
     public void deleteAll() {
         questionRepository.deleteAll();
     }
+
+    public void vote(Question question, SiteUser siteUser) {
+        question.getVoter().add(siteUser);
+        this.questionRepository.save(question);
+    }
 }
